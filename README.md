@@ -1,12 +1,16 @@
-<a href="https://astro.build/" style="margin: 0;"><img align="left" alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="80px" height="80px" style="margin-top: -1rem;"></a>
+<div style="margin-top: 2rem;">
+    <a href="https://astro.build/" style="margin: 0;"><img align="left" alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="80px" height="80px" style="margin-top: -.8rem; margin-right: 1rem"></a>
+    <p style="font-family: monospace; font-size: 2.5rem;">First Astro Project</p>
+</div>
 
-<h1>First Astro Project</h1>
-
+<br />
 <br />
 
 ```sh
 git clone git@github.com:JayJayzzzzzz/astro-site.git
 ```
+
+<br />
 
 ## 🚀 Project Structure
 
