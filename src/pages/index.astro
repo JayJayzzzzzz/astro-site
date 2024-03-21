@@ -1,14 +1,14 @@
 ---
 import Main from "../layouts/Main.astro";
 import CardsContainer from "../components/CardsContainer.astro";
-const profilePicture =
-  "https://marketplace.canva.com/EAEj26uXf4s/2/0/1600w/canva-blau-und-schwarz-sauber-minimalismus-twitch-profil-bild-vtzWjZBTVL4.jpg";
+import ExperienceContainer from "../components/ExperienceContainer.astro";
+const profilePicture = "images/bild.png";
 
-const blogs = await Astro.glob<{
+/* const blogs = await Astro.glob<{
   title: string;
   poster: string;
   subtitle: string;
-}>("../pages/blogs/*.md");
+}>("../pages/blogs/*.md"); */
 ---
 
 <Main title="Home">
@@ -22,39 +22,39 @@ const blogs = await Astro.glob<{
     />
 
     <div class="profile__details">
-      <h1>Frau Katerina</h1>
-      <h2>VP of Engineering at Google</h2>
+      <h1>Julian Schaefers</h1>
+      <h2>Oberschüler, 18 Jahre alt</h2>
       <p>
-        Helping developers be excellent and suceed at building scalable
-        products.
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor.
       </p>
     </div>
   </div>
 
+  <hr />
+
   <CardsContainer
     cards={[
       {
-        title: "Here are my guiding philosophies for life!",
-        gradientFrom: "#818cf8",
-        gradientTo: "#d8b4fe",
-        to: "/philosophies",
-      },
-      {
-        title: "A summary of my work history",
+        title: "Goetheschule Dieburg",
+        content1: "10 Schuljahre im Gymnasialzweig erfolgreich abgeschlossen",
+        content2: "",
         gradientFrom: "#fde68a",
         gradientTo: "#fca5a5",
-        to: "/work-summary",
+        to: "https://goethe.schule/",
       },
       {
-        title: "What I do beyond technology",
+        title: "Alfred-Delp-Schule Dieburg",
+        content1: "Leistungsfächer: Informatik, Mathe",
+        content2: "Angestrebter Schulabschluss: Fachhochschulreife",
         gradientFrom: "#6ee7b7",
         gradientTo: "#9333ba",
-        to: "/beyond-tech",
+        to: "https://ads-dieburg.de/",
       },
     ]}
   />
 
-  <div class="featured-blogs">
+  <!-- <div class="featured-blogs">
     <h3 class="featured-blogs__title">Featured Blogs</h3>
     <p class="featured-blogs__description">
       Opinion pieces that will change everything you know about web development.
@@ -71,10 +71,23 @@ const blogs = await Astro.glob<{
         </li>
       ))
     }
-  </ol>
+  </ol> -->
+
+  <hr />
+
+  <ExperienceContainer />
 </Main>
 
 <style>
+  hr {
+    border: none;
+    height: 0.1px;
+    background-color: var(--grey-200);
+    opacity: 0.3;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+
   .profile {
     display: flex;
     align-items: flex-start;
@@ -91,8 +104,12 @@ const blogs = await Astro.glob<{
   }
 
   .profile__picture {
-    border-radius: 50%;
-    margin: 0 2rem 1rem 0;
+    height: auto;
+    width: 18rem;
+    margin: -4.4rem 2rem 1rem 0;
+    background: var(--profilePic);
+    padding: 0.8rem 0.8rem 1rem 1rem;
+    border-radius: 350px 100px 100px 350px;
   }
 
   .featured-blogs {

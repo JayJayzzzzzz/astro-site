@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 html {
   --background: white;
   --grey-200: #222222;
   --grey-400: #444444;
   --grey-600: #333333;
   --grey-900: #111111;
+  --profilePic: #afafbf;
+  --green: #0dbd8b;
 }
 
 html.dark {
@@ -19,6 +21,8 @@ html.dark {
 body {
   font-family: "Inter", sans-serif;
   padding: 0 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 
   color: var(--grey-600);
   background-color: var(--background);
@@ -37,7 +41,7 @@ h1 + h2 {
 }
 
 main {
-  max-width: 40rem;
+  max-width: 90rem;
   margin: auto;
 }
 

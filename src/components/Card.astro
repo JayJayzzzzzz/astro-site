@@ -2,16 +2,29 @@
 export type Props = {
   to: string;
   title: string;
+  content1: string;
+  content2: string;
   gradientFrom: string;
   gradientTo: string;
 };
 
-const { to, title, gradientFrom, gradientTo } = Astro.props;
+const { to, title, content1, content2, gradientFrom, gradientTo } = Astro.props;
 ---
 
 <a href={to} class="card" data-gradientFrom={gradientFrom}>
   <div class="card__inner">
+    <!-- <img
+      alt="Goetheschule Dieburg"
+      src={title === "Goetheschule Dieburg"
+        ? "images/gsd-logo.png"
+        : "images/test.png"}
+      class={title === "Goetheschule Dieburg" ? "gsd" : "ads"}
+    /> -->
     <div class="card__title">{title}</div>
+    <div class="card__content">
+      <p>{content1}</p>
+      <p>{content2 === "" ? "\u00A0" : content2}</p>
+    </div>
     <div class="card__footer">&rarr;</div>
   </div>
 </a>
@@ -29,6 +42,26 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
     border-radius: var(--radius);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 230px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gsd {
+    position: absolute;
+    width: 12.5%;
+    left: 10px;
+    top: 5px;
+    z-index: 1;
+  }
+
+  .ads {
+    position: absolute;
+    width: 18%;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
   }
 
   .card:hover {
@@ -36,12 +69,14 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
   }
 
   .card__inner {
-    background: var(--background);
+    background: /* url("images/ads-white.png") */ var(--background);
     padding: 1.5rem;
     border-radius: var(--radius);
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 73.7%;
+    height: 175px;
+    align-items: center;
   }
 
   .card__footer {
@@ -49,12 +84,23 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
     padding-top: 2rem;
     font-size: 1.2rem;
     color: var(--grey-900);
+    z-index: 6;
   }
 
   .card__title {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: var(--grey-900);
     font-weight: 500;
     line-height: 1.7rem;
+    z-index: 5;
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    z-index: 4;
   }
 </style>

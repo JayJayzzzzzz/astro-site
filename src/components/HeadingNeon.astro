@@ -1,0 +1,53 @@
+---
+export type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<div class="heading">
+  <h1>
+    <span class="htmlTokens neon-orangey">&lt; </span>
+    {title}
+    <span style="color: var(--green); margin-left: -0.6rem">.</span>
+    <span class="htmlTokens neon-cyan-green"> /&gt;</span>
+  </h1>
+</div>
+
+<style>
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .htmlTokens {
+    font-family: "Major Mono Display", monospace;
+    margin: 0 1.3rem 0 1.3rem;
+  }
+
+  .neon-cyan-green {
+    text-shadow:
+      0 0 5px #6ee7b7,
+      0 0 10px #6ee7b7,
+      0 0 20px #6ee7b7,
+      0 0 40px #6ee7b7,
+      0 0 60px #6ee7b7,
+      0 0 80px #6ee7b7,
+      0 0 100px #6ee7b7;
+  }
+
+  .neon-orangey {
+    text-shadow:
+      0 0 5px #fca5a5,
+      0 0 10px #fca5a5,
+      0 0 20px #fca5a5,
+      0 0 40px #fca5a5,
+      0 0 60px #fca5a5,
+      0 0 80px #fca5a5,
+      0 0 100px #fca5a5;
+  }
+</style>
