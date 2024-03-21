@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# .github folder
+.github/
+
 # vscode stuff
 .vscode/
 
