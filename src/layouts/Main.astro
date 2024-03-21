@@ -1,0 +1,66 @@
+---
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Frau Katerina's website" />
+    <title>{title}</title>
+
+    <script is:inline>
+      const DARK_THEME_CLASS = "dark";
+      const COLOR_MODE = "COLOR_MODE";
+      const LIGHT_THEME = "LIGHT";
+      const DARK_THEME = "dark";
+
+      const rootEl = document.documentElement;
+
+      const getInitialColorMode = () => {
+        const previouslySavedColorMode =
+          window.localStorage.getItem(COLOR_MODE);
+
+        if (previouslySavedColorMode) {
+          return previouslySavedColorMode;
+        }
+
+        if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+          return DARK_THEME;
+        }
+
+        return LIGHT_THEME;
+      };
+
+      const initialColorMode = getInitialColorMode();
+
+      const setInitialColorMode = (mode) => {
+        if (mode === LIGHT_THEME) {
+          rootEl.classList.remove(DARK_THEME_CLASS);
+        } else {
+          rootEl.classList.add(DARK_THEME_CLASS);
+        }
+      };
+
+      setInitialColorMode(initialColorMode);
+    </script>
+  </head>
+  <body>
+    <main>
+      <NavBar />
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>
