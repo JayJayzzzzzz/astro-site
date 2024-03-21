@@ -1,16 +1,12 @@
-{:refdef: style="width: 80px; height: 80px"}
-[![Astro Icon](https://icon.icepanel.io/Technology/png-shadow-512/Astro.png)](https://astro.build/)
-{: refdef}
+<a href="https://astro.build/" style="margin: 0;"><img align="left" alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="80px" height="80px" style="margin-top: -1rem;"></a>
 
-# First Astro Project
+<h1>First Astro Project</h1>
+
+<br />
 
 ```sh
-npm create astro@latest -- --template minimal
+git clone git@github.com:JayJayzzzzzz/astro-site.git
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
 ## 🚀 Project Structure
 
