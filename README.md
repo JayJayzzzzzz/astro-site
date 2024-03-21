@@ -1,7 +1,9 @@
-<a href="https://astro.build/" style="margin: 0;"><img align="left" alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="80px" height="80px" style="margin-top: -.8rem; margin-right: 1rem"></a>
+<div style="display: flex; flex-direction: row; margin-top: 2rem;">
+<a href="https://astro.build/"><img align="left" alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="80px" height="80px" style="margin-top: -.8rem; margin-right: 1rem; padding-bottom: 2rem;"></a>
 
 # First Astro Project
 
+</div>
 <br />
 <br />
 
