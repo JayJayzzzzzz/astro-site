@@ -4,6 +4,17 @@ jobs:
   install-ssh-key:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          cache: "npm"
+      - run: npm install
+      - run: npm run build --if-present
+
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
@@ -12,9 +23,6 @@ jobs:
 
       - name: Adding Known Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Rsync Deployment
         uses: burnett01/rsync-deployments@7.0.0
