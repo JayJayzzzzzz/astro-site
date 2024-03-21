@@ -1,11 +1,6 @@
-<div style="display: flex; flex-direction: row; margin-top: 2rem;">
-<a href="https://astro.build/"><img align="left" alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="80px" height="80px" style="margin-top: -.8rem; margin-right: 1rem; padding-bottom: 2rem;"></a>
+<a href="https://astro.build/"><img alt="Astro Icon" src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png" width="100px" height="100px"></a>
 
 # First Astro Project
-
-</div>
-<br />
-<br />
 
 ```sh
 git clone git@github.com:JayJayzzzzzz/astro-site.git
