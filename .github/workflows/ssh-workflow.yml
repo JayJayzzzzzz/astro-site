@@ -13,5 +13,12 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy with rsync
-        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" /dist ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/public_html
+      - name: Rsync Deployment
+        uses: burnett01/rsync-deployments@7.0.0
+        with:
+          switches: -avzr
+          path: dist/
+          remote_path: /public_html
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_port: ${{ secrets.SSH_PORT }}
+          remote_user: ${{ secrets.SSH_USER }}
