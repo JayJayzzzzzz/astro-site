@@ -15,5 +15,5 @@ jobs:
 
       - name: Testing Dir
         run: |
-          cd /home/runner/work/astro-site
+          cd /home/runner/work/astro-site/astro-site
           echo $(ls)
