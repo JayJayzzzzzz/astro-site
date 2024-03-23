@@ -8,10 +8,14 @@ const { title } = Astro.props;
 
 <div class="heading">
   <h1>
-    <span class="htmlTokens neon-orangey">&lt; </span>
+    <span class="htmlTokens neon-cyan-green transition-colors duration-0"
+      >&lt;
+    </span>
     {title}
     <span style="color: var(--green); margin-left: -0.6rem">.</span>
-    <span class="htmlTokens neon-cyan-green"> /&gt;</span>
+    <span class="htmlTokens neon-purple transition-colors duration-0">
+      /&gt;</span
+    >
   </h1>
 </div>
 
@@ -49,5 +53,16 @@ const { title } = Astro.props;
       0 0 60px #fca5a5,
       0 0 80px #fca5a5,
       0 0 100px #fca5a5;
+  }
+
+  .neon-purple {
+    text-shadow:
+      0 0 5px #9333ba,
+      0 0 10px #9333ba,
+      0 0 20px #9333ba,
+      0 0 40px #9333ba,
+      0 0 60px #9333ba,
+      0 0 80px #9333ba,
+      0 0 100px #9333ba;
   }
 </style>

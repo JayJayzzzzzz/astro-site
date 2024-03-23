@@ -21,46 +21,36 @@ const { title } = Astro.props;
     <title>{title}</title>
 
     <script is:inline>
-      const DARK_THEME_CLASS = "dark";
-      const COLOR_MODE = "COLOR_MODE";
-      const LIGHT_THEME = "LIGHT";
-      const DARK_THEME = "dark";
-
-      const rootEl = document.documentElement;
+      // window.localStorage.getItem('color-mode')
+      // window.matchMedia("(prefers-color-scheme: light)").matches
+      // DARK
 
       const getInitialColorMode = () => {
-        const previouslySavedColorMode =
-          window.localStorage.getItem(COLOR_MODE);
+        const storedColorMode = window.localStorage.getItem("color-mode");
 
-        if (previouslySavedColorMode) {
-          return previouslySavedColorMode;
+        if (storedColorMode != null) {
+          return storedColorMode;
         }
 
         if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-          return LIGHT_THEME;
+          return "white";
         }
 
-        return DARK_THEME;
+        return "dark";
       };
 
       const initialColorMode = getInitialColorMode();
 
-      const setInitialColorMode = (mode) => {
-        if (mode === LIGHT_THEME) {
-          rootEl.classList.remove(DARK_THEME_CLASS);
-        } else {
-          rootEl.classList.add(DARK_THEME_CLASS);
-        }
-      };
-
-      setInitialColorMode(initialColorMode);
+      document.documentElement.setAttribute("data-mode", initialColorMode);
+      window.localStorage.setItem("color-mode", initialColorMode);
     </script>
-  </head>
-  <body>
+  </head><body
+    class="m-auto max-w-[95rem] bg-white font-sans text-slate-600 transition-colors duration-1000 dark:bg-black dark:text-slate-200"
+  >
+    <NavBar />
     <main>
-      <NavBar />
       <slot />
-      <Footer />
     </main>
+    <Footer />
   </body>
 </html>

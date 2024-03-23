@@ -3,15 +3,16 @@ import type { MarkdownLayoutProps } from "astro";
 import Main from "./Main.astro";
 
 type Props = MarkdownLayoutProps<{
+  pageTitle: string;
   title: string;
   subtitle: string;
   poster: string;
 }>;
 
-const { title, subtitle, poster } = Astro.props.frontmatter;
+const { pageTitle, title, subtitle, poster } = Astro.props.frontmatter;
 ---
 
-<Main title="Blog">
+<Main title={pageTitle}>
   <figure class="figure">
     <img
       src={poster}

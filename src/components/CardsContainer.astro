@@ -12,23 +12,6 @@ const { cards } = Astro.props;
 ---
 
 <HeadingNeon title="Bildung" />
-<div class="cards">
+<div class="mb-40 mt-24 flex w-full flex-col justify-center gap-4 xl:flex-row">
   {cards.map((card) => <Card {...card} />)}
 </div>
-
-<style>
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    margin-bottom: 10rem;
-    width: 100%;
-  }
-
-  @media screen and (min-width: 1245px) {
-    .cards {
-      flex-direction: row;
-    }
-  }
-</style>
