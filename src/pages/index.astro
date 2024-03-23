@@ -12,19 +12,25 @@ const profilePicture = "images/bild.png";
 ---
 
 <Main title="Home">
-  <div class="mt-32 flex flex-wrap items-start px-4 py-0">
-    <img
-      id="PERSONAL_PIC"
-      class="-mt-16 mb-4 ml-0 mr-8 h-auto w-80
-      rounded-l-[350px] rounded-r-[100px]
-      bg-slate-800 pb-4 pl-4 pr-3 pt-3 dark:bg-slate-200"
-      width="100px"
-      height="100px"
-      src={profilePicture}
-      alt="a picture of Julian Schaefers"
-    />
+  <div
+    class="mt-32 flex flex-wrap items-start px-4 py-0 max-[1112px]:flex-col max-[1112px]:items-center max-[1112px]:justify-center"
+  >
+    <div
+      id="IMG__DIV"
+      class="overflow-hidden rounded-l-[350px] rounded-r-[100px] bg-slate-800 max-[1112px]:relative max-[1112px]:h-96 max-[1112px]:w-96 max-[1112px]:rounded-full dark:bg-slate-300"
+    >
+      <img
+        id="PERSONAL_PIC"
+        class="-mt-16 mb-4 ml-0 mr-8 h-auto w-full pb-4 pl-4 pr-3 pt-3 max-[1112px]:absolute max-[1112px]:-bottom-32 max-[1112px]:-left-12 max-[1112px]:object-cover"
+        src={profilePicture}
+        alt="a picture of Julian Schaefers"
+      />
+    </div>
 
-    <div id="PERSONAL__INFO" class="-mt-5 ml-5">
+    <div
+      id="PERSONAL__INFO"
+      class="-mt-5 ml-5 max-[1112px]:mt-6 max-[1112px]:flex max-[1112px]:flex-col max-[1112px]:items-center max-[1112px]:justify-center"
+    >
       <h1 class="mt-0 font-bold">Julian Schaefers</h1>
       <h2 class="mt-2">Oberschüler, 18 Jahre alt</h2>
       <p class="mt-10">
