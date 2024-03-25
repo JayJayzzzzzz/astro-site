@@ -2,6 +2,7 @@
 import Main from "../layouts/Main.astro";
 import CardsContainer from "../components/CardsContainer.astro";
 import ExperienceContainer from "../components/ExperienceContainer.astro";
+import Interests from "../components/Interests.astro";
 const profilePicture = "images/bild.png";
 
 /* const blogs = await Astro.glob<{
@@ -23,6 +24,8 @@ const profilePicture = "images/bild.png";
         class="-mt-16 mb-4 ml-0 mr-8 h-auto w-full pb-4 pl-4 pr-3 pt-3 max-[1112px]:absolute max-[1112px]:-bottom-32 max-[1112px]:-left-12 max-[1112px]:object-cover"
         src={profilePicture}
         alt="Portrait of Julian Schaefers"
+        width=""
+        height=""
       />
     </div>
 
@@ -103,6 +106,10 @@ const profilePicture = "images/bild.png";
   <hr class="mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]" />
 
   <ExperienceContainer />
+
+  <hr class="mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]" />
+
+  <Interests />
 </Main>
 
 <style>
