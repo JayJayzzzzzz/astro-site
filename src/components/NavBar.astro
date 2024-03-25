@@ -26,7 +26,7 @@ import ThemeToggler from "./ThemeToggler.astro";
   </button>
 
   <ul
-    class="flex items-center justify-center p-0 max-[1112px]:absolute max-[1112px]:top-20 max-[1112px]:flex-col max-[1112px]:items-end max-[1112px]:opacity-0 max-[1112px]:transition-all max-[1112px]:duration-1000 max-[1112px]:ease-in-out"
+    class="z-20 flex items-center justify-center p-0 max-[1112px]:absolute max-[1112px]:top-20 max-[1112px]:w-full max-[1112px]:flex-col max-[1112px]:items-end max-[1112px]:bg-white max-[1112px]:opacity-0 max-[1112px]:transition-all max-[1112px]:duration-1000 max-[1112px]:ease-in-out max-[1112px]:dark:bg-black"
   >
     <li
       class="mr-32 list-none text-[0.95rem] opacity-80 max-[1112px]:mb-12 max-[1112px]:mr-0 max-[1112px]:mt-10"
@@ -44,7 +44,7 @@ import ThemeToggler from "./ThemeToggler.astro";
         href="/praktikum">Praktikum</a
       >
     </li>
-    <li><ThemeToggler /></li>
+    <li class="mb-5"><ThemeToggler /></li>
   </ul>
 </nav>
 
