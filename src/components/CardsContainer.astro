@@ -12,6 +12,8 @@ const { cards } = Astro.props;
 ---
 
 <HeadingNeon title="Bildung" />
-<div class="mb-40 mt-24 flex w-full flex-col justify-center gap-4 xl:flex-row">
+<div
+  class="mb-40 mt-24 flex w-full flex-col justify-center gap-4 px-3 xl:flex-row"
+>
   {cards.map((card) => <Card {...card} />)}
 </div>
