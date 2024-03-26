@@ -1,8 +1,8 @@
 ---
 import Main from "../layouts/Main.astro";
-import CardsContainer from "../components/CardsContainer.astro";
+import EduContainer from "../components/EducationContainer.astro";
 import ExperienceContainer from "../components/ExperienceContainer.astro";
-import Interests from "../components/Interests.astro";
+import Interests from "../components/InterestsContainer.astro";
 const profilePicture = "images/bild.png";
 
 /* const blogs = await Astro.glob<{
@@ -55,7 +55,7 @@ const profilePicture = "images/bild.png";
 
   <hr class="mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]" />
 
-  <CardsContainer
+  <EduContainer
     cards={[
       {
         title: "John F.- Kennedy Schule",

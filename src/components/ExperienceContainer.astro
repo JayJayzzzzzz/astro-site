@@ -2,31 +2,60 @@
 import HeadingNeon from "./HeadingNeon.astro";
 ---
 
-<HeadingNeon title="Berufserfahrung"/>
-<ul role="list" class="ml-48 mr-48 mt-12">
-  <li class="flex justify-between gap-x-6 py-5">
-    <div class="flex min-w-0 gap-x-4">
-      <p class="text-xl font-semibold leading-">01/2020 (2 Wochen)</p>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="text-xl font-bold leading-6">Praktikum bei "we &#123code&#125 it" (Softwareentwicklung)</p>
-      <p class="mt-1 text-l leading-5">Schwerpunkt: Web-Design mithilfe vom Symfony-Framework (PHP)</p>
-    </div>
-  </li>
-  <li class="flex justify-between gap-x-6 py-5">
-    <div class="flex min-w-0 gap-x-4">
-      <p class="text-xl font-semibold leading-6">03/2021 - 01/2023</p>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="text-xl leading-6 font-bold">Schülernachhilfe</p>
-      <p class="mt-1 text-xl leading-5">Fächer: Mathematik, Englisch, Informatik</p>
-    </div>
-  </li>
+<HeadingNeon title="Berufserfahrung" />
+<ul
+  role="list"
+  class="ml-48 mr-48 mt-12 flex flex-col max-xl:flex-row max-xl:items-center max-xl:justify-center"
+>
+  <div
+    class="max-xl:flex max-xl:flex-col max-xl:items-start max-xl:justify-start"
+  >
+    <li class="xl:flex xl:justify-between xl:gap-x-6 xl:py-5">
+      <p class="text-xl font-semibold leading-6 max-xl:italic">
+        01/2020 (2 Wochen)
+      </p>
+      <div class="flex flex-col items-end max-xl:relative max-xl:items-start">
+        <p class="text-xl font-bold leading-10">
+          Praktikum bei "we &#123code&#125 it" (Softwareentwicklung)
+        </p>
+        <button
+          class="absolute -right-56 -top-10 w-36 items-center justify-center rounded-full bg-gradient-to-r from-[#6ee7b7] to-[#9333ba] p-3 text-base font-semibold text-white max-[1070px]:hidden"
+        >
+          <div class="flex flex-col p-2">
+            <div>Praktikum</div>
+            <div class="">&rarr;</div>
+          </div>
+        </button>
+        <p class="text-l mt-1 leading-5 opacity-50">
+          Schwerpunkt: Web-Design mithilfe vom Symfony-Framework (PHP)
+        </p>
+        <button
+          class="mt-8 hidden w-36 items-center justify-center rounded-full bg-gradient-to-r from-[#6ee7b7] to-[#9333ba] p-3 text-base font-semibold text-white max-[1070px]:block"
+        >
+          <div class="flex flex-col p-2">
+            <div>Praktikum</div>
+            <div class="">&rarr;</div>
+          </div>
+        </button>
+      </div>
+    </li>
+    <li class="mt-10 xl:flex xl:justify-between xl:gap-x-6 xl:py-5">
+      <p class="text-xl font-semibold leading-10 max-xl:italic">
+        03/2021 - 01/2023
+      </p>
+      <div class="flex flex-col items-end max-xl:items-start">
+        <p class="text-xl font-bold leading-6">Schülernachhilfe</p>
+        <p class="text-l mt-1 leading-5 opacity-50">
+          Fächer: Mathematik, Englisch, Informatik
+        </p>
+      </div>
+    </li>
+  </div>
 </ul>
 
 <style>
-    p {
-        --tw-text-opacity: 1;
-        color: rgb(156 163 175 / var(--tw-text-opacity));
-    }
+  p {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
 </style>
