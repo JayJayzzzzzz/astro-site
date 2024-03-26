@@ -1,6 +1,6 @@
 ---
 export type Props = {
-  images: object[];
+  images: string[];
 };
 
 const { images } = Astro.props;
@@ -12,13 +12,15 @@ const { images } = Astro.props;
   <input type="radio" name="slider" id="item-3" />
 
   <div class="cards">
-    {
-      images.map((img) => (
-        <label class="card" for={"item-" + img.id} id={"song-" + img.id}>
-          <img src={img.src} alt="image" />
-        </label>
-      ))
-    }
+    <label class="card" for="item-1" id="song-1">
+      <img src={images[0]} alt="image" />
+    </label>
+    <label class="card" for="item-2" id="song-2">
+      <img src={images[1]} alt="image" />
+    </label>
+    <label class="card" for="item-3" id="song-3">
+      <img src={images[2]} alt="image" />
+    </label>
   </div>
 </div>
 
