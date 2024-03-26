@@ -2,35 +2,58 @@
 import HeadingNeon from "./HeadingNeon.astro";
 ---
 
-<HeadingNeon title="Kenntnisse und Interessen"/>
+<HeadingNeon title="Kenntnisse und Interessen" />
 <ul role="list" class="ml-48 mr-48 mt-12">
-  <li class="flex justify-between gap-x-6 py-5">
-    <div class="flex min-w-0 gap-x-4">
-      <p class="text-xl font-semibold leading- dark:text-gray-400">Fremdsprachen</p>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="mt-1 text-xl leading-5 dark:text-gray-400">Deutsch (Muttersprache)</p>
-      <p class="mt-1 text-xl leading-5 dark:text-gray-400">Englisch (Fließend)</p>
-      <p class="mt-1 text-xl leading-5 dark:text-gray-400">Spanisch (Grundkenntnisse)</p>
-    </div>
-  </li>
-  <li class="flex justify-between gap-x-6 py-5">
-    <div class="flex min-w-0 gap-x-4">
-      <p class="text-xl font-semibold leading-6 dark:text-gray-400">IT-Kenntnisse</p>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="mt-1 text-l leading-5 dark:text-gray-400">Java, Python, HTML, CSS -> Fortgeschritten</p>
-      <p class="mt-1 text-xl leading-5 dark:text-gray-400">PHP, Tailwind, Astro -> (Anfänger-Fortgeschritten)</p>
-      <p class="text-xl leading-6 font-bold dark:text-gray-400">Java-Script -> (Anfänger)</p>
-    </div>
-  </li>
-  <li class="flex justify-between gap-x-6 py-5">
-    <div class="flex min-w-0 gap-x-4">
-      <p class="text-xl font-semibold leading-6 dark:text-gray-400">Hobbys</p>
-    </div>
-    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p class="text-xl leading-6 font-bold dark:text-gray-400">Piano, Programmieren, Paar-Tanz(Standard und Latein)</p>
-      <p class="mt-1 text-xl leading-5 dark:text-gray-400">Messdiener (ehrenamtlich seit 9 Jahren)</p>
-    </div>
-  </li>
+  <div
+    class="max-xl:flex max-xl:flex-col max-xl:items-start max-xl:justify-start"
+  >
+    <li class="max-xl:pb-12 xl:flex xl:justify-between xl:gap-x-6 xl:py-5">
+      <p
+        class="font-semibold leading-6 max-xl:text-2xl max-xl:italic dark:text-gray-400"
+      >
+        Fremdsprachen
+      </p>
+      <div class="flex flex-col items-end max-xl:items-start">
+        <p class="mt-1 text-xl leading-6 max-xl:mt-3 dark:text-gray-400">
+          Deutsch (Muttersprache)
+        </p>
+        <p class="mt-1 text-xl leading-6 dark:text-gray-400">
+          Englisch (Fließend)
+        </p>
+        <p class="mt-1 text-xl leading-6 dark:text-gray-400">
+          Spanisch (Grundkenntnisse)
+        </p>
+      </div>
+    </li>
+    <li class="max-xl:pb-12 xl:flex xl:justify-between xl:gap-x-6 xl:py-5">
+      <p
+        class="text-xl font-semibold leading-6 max-xl:text-2xl max-xl:italic dark:text-gray-400"
+      >
+        IT-Kenntnisse
+      </p>
+      <div class="flex flex-col items-end max-xl:items-start">
+        <p class="mt-1 text-xl leading-6 dark:text-gray-400">
+          PHP, Tailwind, Astro, React -> (Anfänger-Fortgeschritten)
+        </p>
+        <p class="mt-1 text-xl font-bold leading-6 dark:text-gray-400">
+          Java, Python, HTML, CSS -> Fortgeschritten
+        </p>
+      </div>
+    </li>
+    <li class="max-xl:pb-12 xl:flex xl:justify-between xl:gap-x-6 xl:py-5">
+      <p
+        class="text-xl font-semibold leading-6 max-xl:text-2xl max-xl:italic dark:text-gray-400"
+      >
+        Hobbys
+      </p>
+      <div class="flex flex-col items-end max-xl:items-start">
+        <p class="text-xl font-bold leading-6 max-xl:mt-3 dark:text-gray-400">
+          Piano, Programmieren, Paar-Tanz(Standard und Latein)
+        </p>
+        <p class="mt-1 text-xl leading-5 dark:text-gray-400">
+          Messdiener (ehrenamtlich seit 9 Jahren)
+        </p>
+      </div>
+    </li>
+  </div>
 </ul>
