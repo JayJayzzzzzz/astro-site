@@ -1,0 +1,18 @@
+---
+import Main from "../layouts/Main.astro";
+import Carousel from "../components/Carousel.astro";
+import HeadingNeon from "../components/HeadingNeon.astro";
+---
+
+<Main title="Praktikum">
+  <!-- MAXIMUM 3 Images -->
+  <Carousel
+    images={[
+      { id: 1, src: "images/praktikum-3.jpg" },
+      { id: 2, src: "images/praktikum-2.jpg" },
+      { id: 3, src: "images/praktikum-1.jpg" },
+    ]}
+  />
+  <HeadingNeon title="we { code } it" />
+  <p>Kay Haikal & Sophia Wittwer</p>
+</Main>
