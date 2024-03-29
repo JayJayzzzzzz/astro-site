@@ -61,9 +61,7 @@ const { title } = Astro.props;
           { opacity: 1, pointerEvents: "all", stagger: 0.2 },
           "-=.8",
         )
-        .to(".toggler", { opacity: 1 }, "-=.8")
-        .to(".close", { opacity: 1, pointerEvents: "all" }, "-=.8")
-        .to("nav h2", { opacity: 1 }, "-=1");
+        .to(".close", { opacity: 1, pointerEvents: "all" }, "-=.8");
     }
   });
 
