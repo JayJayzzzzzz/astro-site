@@ -1,0 +1,91 @@
+---
+import ThemeToggler from "./ThemeToggler.astro";
+---
+
+<nav
+  class="relative mb-[4.5rem] flex flex-col items-center justify-center px-0 py-8 max-[1112px]:items-end"
+>
+  <button
+    id="dropdown-toggle"
+    class="isHidden z-30 max-[1112px]:relative max-[1112px]:-mr-2 max-[1112px]:-mt-10 max-[1112px]:h-[4.5rem] max-[1112px]:w-[100vw] max-[1112px]:bg-white max-[1112px]:pr-5 max-[1112px]:dark:bg-black"
+  >
+    <svg
+      class="absolute right-5 top-5 hidden w-10 opacity-100 max-[1112px]:block"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+        <path
+          class="fill-black dark:fill-white"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+        ></path>
+      </g></svg
+    >
+  </button>
+
+  <ul
+    class="z-20 flex items-center justify-center p-0 max-[1112px]:absolute max-[1112px]:-top-52 max-[1112px]:-mr-2 max-[1112px]:w-[100vw] max-[1112px]:flex-col max-[1112px]:items-end max-[1112px]:bg-white max-[1112px]:pr-5 max-[1112px]:opacity-0 max-[1112px]:opacity-90 max-[1112px]:transition-all max-[1112px]:duration-1000 max-[1112px]:ease-in-out max-[1112px]:dark:bg-black"
+  >
+    <li
+      class="mr-32 list-none text-[0.95rem] opacity-80 max-[1112px]:mb-12 max-[1112px]:mr-0 max-[1112px]:mt-10"
+    >
+      <a
+        class="rounded-xl px-4 py-2 text-gray-600 opacity-90 dark:text-gray-400 hover:dark:text-white"
+        href="/">Home</a
+      >
+    </li>
+    <li
+      class="max-[1112px]: mr-32 list-none text-[0.95rem] opacity-80 max-[1112px]:mb-10 max-[1112px]:mr-0"
+    >
+      <a
+        class="rounded-xl px-4 py-2 text-gray-600 opacity-90 dark:text-gray-400 hover:dark:text-white"
+        href="/praktikum/">Praktikum</a
+      >
+    </li>
+    <li class="max-[1112px]:mb-5"><ThemeToggler /></li>
+  </ul>
+</nav>
+
+<style>
+  @tailwind components;
+
+  @layer components {
+    .active {
+      @apply bg-gray-800 text-white dark:bg-gray-100 dark:text-black hover:dark:text-black;
+    }
+  }
+</style>
+
+<script>
+  const toggleButton = document.getElementById("dropdown-toggle");
+
+  toggleButton?.addEventListener("click", () => {
+    const list = document.querySelector("ul");
+
+    list?.classList.contains("max-[1112px]:opacity-0")
+      ? (list.classList.remove("max-[1112px]:opacity-0"),
+        list.classList.add("max-[1112px]:opacity-100"),
+        list.classList.remove("max-[1112px]:-top-52"),
+        list.classList.add("max-[1112px]:top-16"))
+      : (list?.classList.remove("max-[1112px]:opacity-100"),
+        list?.classList.add("max-[1112px]:opacity-0"),
+        list?.classList.remove("max-[1112px]:top-16"),
+        list?.classList.add("max-[1112px]:-top-52"));
+  });
+
+  const { pathname } = window.location;
+  console.log(pathname);
+
+  const activeNavigationElement = document.querySelector(
+    `nav a[href="${pathname}"]`,
+  );
+
+  if (activeNavigationElement) {
+    activeNavigationElement.classList.add("active");
+  }
+</script>
