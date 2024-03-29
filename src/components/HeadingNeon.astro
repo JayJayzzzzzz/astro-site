@@ -8,10 +8,10 @@ const { title } = Astro.props;
 
 <div class="heading">
   {
-    title !== "Kenntnisse und Interessen" ? (
+    title !== "Kenntnisse und Interessen" && title !== "we { code } it" ? (
       <h1
         class={
-          "max-[800px]:text-[2.5rem] max-[600px]:ml-3 max-[500px]:ml-2" +
+          "max-[800px]:text-[2.5rem] max-[600px]:ml-3 max-[500px]:ml-2 max-[417px]:text-[2.3rem]" +
           (title === "Berufserfahrung"
             ? "max-[600px]:text-[2rem] max-[500px]:text-[1.8rem] max-[455px]:text-[1.7rem] max-[436px]:text-[1.6rem] max-[417px]:text-[1.5rem] max-[398px]:text-[1.4rem]"
             : "")
@@ -28,8 +28,21 @@ const { title } = Astro.props;
           /&gt;
         </span>
       </h1>
+    ) : title === "we { code } it" ? (
+      <h1 class="max-[800px]:text-[2.5rem] max-[600px]:ml-3 max-[506px]:text-[2.1rem] max-[500px]:ml-2 max-[439px]:text-[1.9rem] max-[406px]:text-[1.7rem]">
+        <span class="htmlTokens neon-cyan-green transition-colors duration-0">
+          &lt;
+        </span>
+        {title}
+        <span class="-ml-[0.6rem] text-[#0dbd8b] max-[600px]:-ml-[0.2rem]">
+          .
+        </span>
+        <span class="htmlTokens neon-purple transition-colors duration-0">
+          /&gt;
+        </span>
+      </h1>
     ) : (
-      <h1 class="max-[1055px]:text-[3.3rem] max-[975px]:text-[3rem] max-[895px]:text-[2.6rem] max-[800px]:text-[2.5rem] max-[760px]:text-[2.2rem] max-[680px]:text-[2rem] max-[630px]:text-[1.8rem] max-[600px]:ml-3 max-[591px]:text-[1.6rem] max-[537px]:text-[1.4rem] max-[500px]:ml-2 max-[480px]:text-[1.2rem] max-[460px]:text-[1.1rem]">
+      <h1 class="max-[1070px]:text-[3.5rem] max-[1055px]:text-[3.3rem] max-[990px]:text-[3.1rem] max-[975px]:text-[3rem] max-[910px]:text-[2.8rem] max-[895px]:text-[2.6rem] max-[803px]:text-[2.5rem] max-[775px]:text-[2.3rem] max-[760px]:text-[2.2rem] max-[695px]:text-[2rem] max-[643px]:text-[1.8rem] max-[600px]:ml-3 max-[600px]:text-[1.6rem] max-[554px]:text-[1.4rem] max-[500px]:ml-2 max-[496px]:text-[1.3rem] max-[470px]:text-[1.2rem] max-[445px]:text-[1.1rem] max-[415px]:text-[1rem]">
         <span class="htmlTokens neon-cyan-green transition-colors duration-0">
           &lt;
         </span>

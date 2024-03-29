@@ -5,6 +5,8 @@ import HeadingNeon from "../components/HeadingNeon.astro";
 ---
 
 <Main title="Praktikum">
+  <div class="mb-10 mt-24"></div>
+
   <!-- MAXIMUM 3 Images -->
   <Carousel
     images={[
@@ -13,6 +15,27 @@ import HeadingNeon from "../components/HeadingNeon.astro";
       "../images/praktikum-1.jpg",
     ]}
   />
-  <HeadingNeon title="we { code } it" />
-  <p>Kay Haikal & Sophia Wittwer</p>
+  <div class="mt-10 items-center justify-center text-center">
+    <h1 class="-mb-12">Mein Praktikum bei</h1>
+    <HeadingNeon title="we { code } it" />
+  </div>
+  <div class="mx-3 mt-12 items-center justify-center text-center">
+    <p class="text-xl text-gray-500">
+      Mein Praktikum bei "we &lcub; code &rcub; it" bot eine intensive Erfahrung
+      im Symfony-basierten Web-Design und Web-Development. Obwohl meine
+      beruflichen Ambitionen woanders liegen, war diese Zeit äußerst lehrreich.
+      Durch die Arbeit an realen Projekten konnte ich meine Fähigkeiten in PHP
+      und Symfony erheblich ausbauen und lernte zugleich, wie wichtig Teamarbeit
+      und branchenübliche Best Practices sind. Es war eine wertvolle und
+      informative Erfahrung, die meinen Horizont erweiterte und mich als
+      angehenden Entwickler weiterbrachte.
+    </p>
+    <hr
+      class="z-10 mx-2 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"
+    />
+    <p>
+      Die Firma "we &lcub; code &rcub; it" gibt es nach meinem aktuellen
+      Wissensstand leider nicht mehr.
+    </p>
+  </div>
 </Main>

@@ -53,7 +53,7 @@ const { title } = Astro.props;
     class="m-auto max-w-[95rem] overflow-x-hidden bg-white font-sans text-slate-600 transition-colors duration-1000 dark:bg-black dark:text-slate-200"
   >
     <!-- <NavBar /> -->
-    <NavBar />
+    <NavBar title={title} />
     <main>
       <slot />
     </main>

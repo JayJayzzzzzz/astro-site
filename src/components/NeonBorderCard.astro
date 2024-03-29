@@ -35,8 +35,8 @@ const { to, title, content1, content2, gradientFrom, gradientTo } = Astro.props;
         id="card__description"
         class="-mb-4 mt-4 flex flex-col items-center justify-center"
       >
-        <p>{content1}</p>
-        <p>
+        <p class="dark:text-gray-500">{content1}</p>
+        <p class="dark:text-gray-500">
           {content2 === "" ? "\u00A0" : content2}
         </p>
       </div>
