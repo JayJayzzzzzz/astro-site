@@ -8,68 +8,6 @@ type Props = {
 const { title } = Astro.props;
 ---
 
-<div class="mainBG">
-  <div class="container absolute right-[5%] top-[50%]">
-    <div
-      class="bars bg-black duration-0 before:bg-black after:bg-black dark:bg-white dark:before:bg-white dark:after:bg-white"
-    >
-    </div>
-  </div>
-  {
-    title !== "Praktikum" ? (
-      <div class="absolute right-[4.7%] top-[120%] max-2xl:right-[4.5%] max-[890px]:right-[4.3%] max-[725px]:right-[4.1%] max-[600px]:right-[3.9%]">
-        <ThemeToggler />
-      </div>
-    ) : (
-      <div class="absolute left-[4.7%] top-[35%]">
-        <ThemeToggler />
-      </div>
-    )
-  }
-</div>
-
-<nav class="bg-zinc-300 dark:bg-zinc-800">
-  <div class="close">
-    <div></div>
-  </div>
-  <ul class="text-black duration-0 dark:text-white">
-    <li>
-      <a href="/" class="duration-0 after:bg-black dark:after:bg-white">Home</a>
-    </li>
-    <li>
-      <a href="/praktikum" class="duration-0 after:bg-black dark:after:bg-white"
-        >Praktikum</a
-      >
-    </li>
-  </ul>
-</nav>
-
-<script>
-  import { gsap } from "gsap";
-
-  const open = document.querySelector(".container");
-  const close = document.querySelector(".close");
-  var tl = gsap.timeline({ defaults: { duration: 1, ease: "expo.inOut" } });
-  open?.addEventListener("click", () => {
-    if (tl.reversed()) {
-      tl.play();
-    } else {
-      tl.to("nav", { right: 0 })
-        .to("nav", { height: "100vh" }, "-=.1")
-        .to(
-          "nav ul li a",
-          { opacity: 1, pointerEvents: "all", stagger: 0.2 },
-          "-=.8",
-        )
-        .to(".close", { opacity: 1, pointerEvents: "all" }, "-=.8");
-    }
-  });
-
-  close?.addEventListener("click", () => {
-    tl.reverse();
-  });
-</script>
-
 <style>
   h1 {
     font-size: 40px;
@@ -209,3 +147,66 @@ const { title } = Astro.props;
     }
   }
 </style>
+
+
+<div class="mainBG">
+  <div class="container absolute right-[5%] top-[50%]">
+    <div
+      class="bars bg-black duration-0 before:bg-black after:bg-black dark:bg-white dark:before:bg-white dark:after:bg-white"
+    >
+    </div>
+  </div>
+  {
+    title !== "Praktikum" ? (
+        <div class="absolute left-[4.7%] top-[35%]">
+          <ThemeToggler />
+        </div>
+    ) : (
+      <div class="absolute left-[4.7%] top-[35%]">
+        <ThemeToggler />
+      </div>
+    )
+  }
+</div>
+
+<nav class="bg-zinc-300 dark:bg-zinc-800">
+  <div class="close">
+    <div></div>
+  </div>
+  <ul class="text-black duration-0 dark:text-white">
+    <li>
+      <a href="/" class="duration-0 after:bg-black dark:after:bg-white">Home</a>
+    </li>
+    <li>
+      <a href="/praktikum" class="duration-0 after:bg-black dark:after:bg-white"
+        >Praktikum</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<script>
+  import { gsap } from "gsap";
+
+  const open = document.querySelector(".container");
+  const close = document.querySelector(".close");
+  var tl = gsap.timeline({ defaults: { duration: 1, ease: "expo.inOut" } });
+  open?.addEventListener("click", () => {
+    if (tl.reversed()) {
+      tl.play();
+    } else {
+      tl.to("nav", { right: 0 })
+        .to("nav", { height: "100vh" }, "-=.1")
+        .to(
+          "nav ul li a",
+          { opacity: 1, pointerEvents: "all", stagger: 0.2 },
+          "-=.8",
+        )
+        .to(".close", { opacity: 1, pointerEvents: "all" }, "-=.8");
+    }
+  });
+
+  close?.addEventListener("click", () => {
+    tl.reverse();
+  });
+</script>

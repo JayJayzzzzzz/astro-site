@@ -1,22 +1,30 @@
 <footer
-  class="mb-10 mt-20 flex flex-row items-center justify-center text-center text-[0.9rem] max-[630px]:flex-col"
+    class="mb-10 mt-20 flex flex-col items-center justify-center text-center text-[0.9rem] space-y-4"
 >
-  &copy; by Julian Schaefers –– Created with
-  <div
-    class="mx-3 rounded-xl bg-slate-300 transition-all duration-200 ease-in-out hover:scale-95 max-[630px]:my-3 dark:bg-slate-800"
-  >
-    <a
-      class="bg-gradient-to-r from-[#494bf8] from-20% to-[#b657ed] bg-clip-text p-3 font-[monospace] text-[1.15rem] font-semibold uppercase text-transparent"
-      href="https://astro.build/">&lt; Astro /&gt;</a
+  <div class="flex flex-row flex-wrap items-center justify-center max-[630px]:flex-col">
+    &copy; by Julian Schaefers –– Created with
+    <div
+        class="mx-3 rounded-xl bg-slate-300 transition-all duration-200 ease-in-out hover:scale-95 max-[630px]:my-3 dark:bg-slate-800"
     >
+      <a
+          class="bg-gradient-to-r from-[#494bf8] from-20% to-[#b657ed] bg-clip-text p-3 font-[monospace] text-[1.15rem] font-semibold uppercase text-transparent"
+          href="https://astro.build/">&lt; Astro /&gt;</a
+      >
+    </div>
+    and
+    <div
+        class="mx-3 rounded-xl bg-slate-300 transition-all duration-200 ease-in-out hover:scale-95 max-[630px]:my-3 dark:bg-slate-800"
+    >
+      <a
+          class="bg-gradient-to-r from-[#77c8f0] to-[#ea6eb0] bg-clip-text p-3 font-[monospace] text-[1.15rem] font-semibold uppercase text-transparent"
+          href="https://tailwindcss.com/">&lt; Tailwind /&gt;</a
+      >
+    </div>
   </div>
-  and
-  <div
-    class="mx-3 rounded-xl bg-slate-300 transition-all duration-200 ease-in-out hover:scale-95 max-[630px]:my-3 dark:bg-slate-800"
-  >
-    <a
-      class="bg-gradient-to-r from-[#77c8f0] to-[#ea6eb0] bg-clip-text p-3 font-[monospace] text-[1.15rem] font-semibold uppercase text-transparent"
-      href="https://tailwindcss.com/">&lt; Tailwind /&gt;</a
-    >
+
+  <!-- Neue zweite Zeile -->
+  <div class="space-x-4">
+    <a href="/impressum" class="hover:underline text-blue-600 dark:text-gray-500">Impressum</a>
+    <a href="/datenschutz" class="hover:underline text-blue-600 dark:text-gray-500">Datenschutz</a>
   </div>
 </footer>
