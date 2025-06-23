@@ -3,7 +3,7 @@ import Main from "../layouts/Main.astro";
 import EduContainer from "../components/EducationContainer.astro";
 import ExperienceContainer from "../components/ExperienceContainer.astro";
 import Interests from "../components/InterestsContainer.astro";
-const profilePicture = "images/portrait_transparent.png";
+import HeroSection from '../components/HeroSection.jsx';
 
 /* const blogs = await Astro.glob<{
   title: string;
@@ -13,44 +13,50 @@ const profilePicture = "images/portrait_transparent.png";
 ---
 
 <Main title="Home">
-  <div
-    class="mt-32 flex flex-wrap items-start px-4 py-0 max-[1650px]:flex-col max-[1650px]:items-center max-[1650px]:justify-center max-[435px]:-ml-3 max-[425px]:-ml-5 max-[410px]:-ml-6 max-[400px]:-ml-7"
-  >
-    <div
-      id="IMG__DIV"
-      class="hidden h-max max-w-96 overflow-hidden rounded-l-[350px] rounded-r-[100px] bg-slate-300 max-[1650px]:relative max-[1650px]:ml-6 max-[1650px]:flex max-[1650px]:h-[22.5rem] max-[1650px]:w-[22.5rem] max-[1650px]:rounded-full"
-    >
-      <img
-        class="-mt-18 mb-4 ml-9 mr-8 h-auto w-96 pb-4 pl-4 pr-3 pt-3 max-[1650px]:absolute max-[1650px]:-bottom-32 max-[1650px]:-left-12 max-[1650px]:object-cover"
-        src={profilePicture}
-        alt="Portrait of Julian Schaefers"
-        width=""
-        height=""
-      />
-    </div>
+  <!--<div-->
+  <!--  class="mt-32 flex flex-wrap items-start px-4 py-0 max-[1650px]:flex-col max-[1650px]:items-center max-[1650px]:justify-center max-[435px]:-ml-3 max-[425px]:-ml-5 max-[410px]:-ml-6 max-[400px]:-ml-7"-->
+  <!--&gt;-->
+  <!--  <div-->
+  <!--    id="IMG__DIV"-->
+  <!--    class="hidden h-max max-w-96 overflow-hidden rounded-l-[350px] rounded-r-[100px] bg-slate-300 max-[1650px]:relative max-[1650px]:ml-6 max-[1650px]:flex max-[1650px]:h-[22.5rem] max-[1650px]:w-[22.5rem] max-[1650px]:rounded-full"-->
+  <!--  >-->
+  <!--    <img-->
+  <!--      class="-mt-18 mb-4 ml-9 mr-8 h-auto w-96 pb-4 pl-4 pr-3 pt-3 max-[1650px]:absolute max-[1650px]:-bottom-32 max-[1650px]:-left-12 max-[1650px]:object-cover"-->
+  <!--      src={profilePicture}-->
+  <!--      alt="Portrait of Julian Schaefers"-->
+  <!--      width=""-->
+  <!--      height=""-->
+  <!--    />-->
+  <!--  </div>-->
 
-    <img
-      class="-mt-16 mb-4 ml-0 mr-8 h-auto w-80 rounded-l-[350px] rounded-r-[100px] bg-slate-300 pb-4 pl-4 pr-3 pt-3 max-[1650px]:absolute max-[1650px]:-bottom-32 max-[1650px]:-left-12 max-[1650px]:hidden max-[1650px]:object-cover"
-      src={profilePicture}
-      alt="Portrait of Julian Schaefers"
-    />
+  <!--  <img-->
+  <!--    class="-mt-16 mb-4 ml-0 mr-8 h-auto w-80 rounded-l-[350px] rounded-r-[100px] bg-slate-300 pb-4 pl-4 pr-3 pt-3 max-[1650px]:absolute max-[1650px]:-bottom-32 max-[1650px]:-left-12 max-[1650px]:hidden max-[1650px]:object-cover"-->
+  <!--    src={profilePicture}-->
+  <!--    alt="Portrait of Julian Schaefers"-->
+  <!--  />-->
 
-    <div
-      id="PERSONAL__INFO"
-      class="-mt-5 ml-5 max-[1650px]:mt-6 max-[1650px]:flex max-[1650px]:flex-col max-[1650px]:items-center max-[1650px]:justify-center"
-    >
-      <h1
-        class="mt-0 font-bold transition-colors duration-0 max-[1650px]:flex max-[1650px]:flex-col max-[1650px]:items-center max-[1650px]:justify-center max-[1650px]:text-justify"
-      >
-        <span class="">Julian</span>
-        <span class="">Schaefers</span>
-      </h1>
-      <h2>19 Jahre alt</h2>
-      <p class="mt-10">
-        Bewerbung als Auszubildender zum Fachinformatiker in Anwendungsentwicklung.
-      </p>
-    </div>
-  </div>
+  <!--  <div-->
+  <!--    id="PERSONAL__INFO"-->
+  <!--    class="-mt-5 ml-5 max-[1650px]:mt-6 max-[1650px]:flex max-[1650px]:flex-col max-[1650px]:items-center max-[1650px]:justify-center"-->
+  <!--  >-->
+  <!--    <h1-->
+  <!--      class="mt-0 font-bold transition-colors duration-0 max-[1650px]:flex max-[1650px]:flex-col max-[1650px]:items-center max-[1650px]:justify-center max-[1650px]:text-justify"-->
+  <!--    >-->
+  <!--      <span class="">Julian</span>-->
+  <!--      <span class="">Schaefers</span>-->
+  <!--    </h1>-->
+  <!--    <h2>19 Jahre alt</h2>-->
+  <!--    <p class="mt-10">-->
+  <!--      Bewerbung als Auszubildender zum Fachinformatiker in Anwendungsentwicklung.-->
+  <!--    </p>-->
+  <!--  </div>-->
+  <!--</div>-->
+
+  <!--<hr-->
+  <!--    class="z-10 mx-5 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"-->
+  <!--/>-->
+
+  <HeroSection client:load />
 
   <hr
     class="z-10 mx-5 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"
