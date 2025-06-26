@@ -1,6 +1,5 @@
 ---
 import Card from "./Card.astro";
-import HeadingNeon from "./HeadingNeon.astro";
 
 import type { Props as CardProp } from "./Card.astro";
 
@@ -11,9 +10,8 @@ type Props = {
 const { cards } = Astro.props;
 ---
 
-<HeadingNeon title="Bildung" />
 <div
-  class="mb-40 mt-24 flex w-full flex-col justify-center gap-4 px-3 xl:flex-row"
+  class="mb-40 mt-24 flex w-full flex-col gap-4 justify-center px-3 xl:flex-row"
 >
   {cards.map((card) => <Card {...card} />)}
 </div>

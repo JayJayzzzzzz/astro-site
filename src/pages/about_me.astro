@@ -1,0 +1,165 @@
+---
+import Main from "../layouts/Main.astro";
+import Carousel from "../components/Carousel.astro";
+import HeadingNeon from "../components/HeadingNeon.astro";
+import SkillsContainer from "../components/SkillsContainer.astro";
+---
+
+<Main title="Über mich">
+    <div class="mb-10 mt-24"></div>
+
+    <!-- MAXIMUM 3 Images -->
+    <Carousel
+            images={[
+                "../images/anime_auto.jpg",
+                "../images/league_of_legends.jpg",
+                "../images/tanzen.jpg",
+            ]}
+    />
+    <div class="mt-10 items-center justify-center text-center">
+        <HeadingNeon title="Über mich" />
+    </div>
+    <section class="max-w-6xl mx-auto px-6 py-12 text-center text-gray-100">
+        <p class="text-lg leading-relaxed">
+            Hey, ich bin <strong>Julian Schaefers</strong> – angehender Fachinformatiker für Anwendungsentwicklung mit einem klaren Ziel:
+            <strong>Ich will verstehen, gestalten und besser machen.</strong>
+            <br /><br />
+            In meiner Ausbildung habe ich bereits komplexe Webanwendungen mit <strong>Jakarta EE, JPA, REST</strong> und <strong>LDAP</strong> entwickelt. Ich arbeite mit relationalen Datenbanken, Criteria-Abfragen und gestalte Backend-Strukturen, die wartbar und durchdacht sind.
+            <br /><br />
+            Frontendseitig setze ich auf <strong>Astro</strong> und <strong>TailwindCSS</strong>, kombiniere Animationen mit Benutzerführung und feile an visuellen Details.
+            <br /><br />
+            Ich analysiere Probleme gerne tief – egal ob es um kaputte Tastatureingaben, nicht typisierte Komponenten oder Stacktrace-Fehler geht. Auch kreative Projekte wie die Arbeit mit <strong>Stable Diffusion</strong> oder die Pose-Optimierung in KI-generierten Bildern gehören für mich dazu.
+            <br /><br />
+            Mein Interesse endet nicht bei Code. Ich liebe Technik: Von Motorradketten über Bowlingbahnen bis zu Auto-Motoren. Ich verstehe Zusammenhänge, lerne kontinuierlich und arbeite mit vollem Einsatz – digital wie analog.
+            <br /><br />
+            Und wenn es mal nicht um Technik geht, tauche ich tief in die Welt von Anime ein. Serien mit spannenden Welten, cleveren Charakteren und starken Emotionen inspirieren mich – manchmal auch für Cosplay-Projekte. Ich lerne nebenbei auch etwas Japanisch, weil mich die Sprache, Kultur und Ausdrucksweise schon lange faszinieren.
+            <br /><br />
+            Seit einigen Jahren tanze ich im Verein Standard und Latein. Das Deutsche Goldene Tanzabzeichen war für mich ein schönes Etappenziel – und bis heute schätze ich das Zusammenspiel aus Musik, Bewegung und Zusammenhalt in der Gruppe.
+            <br /><br />
+            Auch Gaming gehört für mich dazu – vor allem Titel mit Tiefe und Herausforderung. In League of Legends reizt mich das Zusammenspiel aus Strategie, Mechanik und Teamplay. In Lost Ark fasziniert mich das fein abgestimmte Kampfsystem und die Liebe zum Detail. Beide Spiele fordern schnelle Entscheidungen, Planung und Ausdauer – Eigenschaften, die ich auch im Alltag gut gebrauchen kann.
+            <br /><br />
+            <strong>Code, Design, Neugier, Präzision – das bin ich.</strong>
+        </p>
+    </section>
+
+    <hr
+            class="z-10 mx-5 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"
+    />
+
+    <!-- Skills Section -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <h1 class="text-5xl font-semibold text-center mb-8">Skills</h1>
+        <SkillsContainer
+                cards={[
+                    {
+                        title: "Java",
+                        content1: "Jakarta, JPA,",
+                        content2: "REST-APIs, LDAP, JUnit",
+                        gradientFrom: "#fde68a",
+                        gradientTo: "#fca5a5",
+                        to: "#",
+                    },
+                    {
+                        title: "Frontend",
+                        content1: "Astro, TailwindCSS,",
+                        content2: "React, HTML/CSS",
+                        gradientFrom: "#6ee7b7",
+                        gradientTo: "#9333ba",
+                        to: "#",
+                    },
+                    {
+                        title: "Python",
+                        content1: "Skripterstellung &",
+                        content2: "Automatieserungen",
+                        gradientFrom: "#fde68a",
+                        gradientTo: "#fca5a5",
+                        to: "#",
+                    },
+                    {
+                        title: "SQL",
+                        content1: "Relationale Datenbanken",
+                        content2: "Indexierung und Performance-Tuning",
+                        gradientFrom: "#fde68a",
+                        gradientTo: "#fca5a5",
+                        to: "#",
+                    },
+                    {
+                        title: "PHP",
+                        content1: "Einfacher Mailversand & Datenbankanbindungen, sowie",
+                        content2: "Erste Erfahrungen mit Symfony",
+                        gradientFrom: "#fde68a",
+                        gradientTo: "#fca5a5",
+                        to: "#",
+                    },
+                    {
+                        title: "AI Tools",
+                        content1: "Stable Diffusion",
+                        content2: "",
+                        gradientFrom: "#fde68a",
+                        gradientTo: "#fca5a5",
+                        to: "#",
+                    }
+                ]}
+        />
+    </section>
+
+    <hr
+            class="z-10 mx-5 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"
+    />
+
+    <!-- Project Section -->
+    <section class="max-w-4xl mx-auto px-6 py-12 text-gray-100">
+        <h1 class="text-5xl font-semibold text-center mb-8">Projekte</h1>
+        <div class="flex flex-row gap-10">
+            <div class="bg-gray-500 dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                <h3 class="text-2xl font-bold mb-2">Rundschreiben-System</h3>
+                <p class="mb-4">Ein internes Verwaltungssystem mit Benutzerverwaltung, LDAP-Anbindung, Asynchronen Mailingfunktionen, Scheduling Jobs, Massiven Batched Inserts und komplexer JSON-Response -und Request Logik — vollständig umgesetzt mit Jakarta EE 10, JPA/Criteria und Open Liberty Application Server.</p>
+            </div>
+            <div class="bg-gray-500 dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                <h3 class="text-2xl font-bold mb-2">Automatisierte Werbe-Mails</h3>
+                <p class="mb-4">Ein automatisiertes Mailing-System zur Adress- und Kontaktdatenerfassung über Web-Scraping-Plattformen wie Gelbeseiten – vollständig umgesetzt mit Python. Extrahierte Namen, Adressen und E-Mails werden in Excel-Dateien gespeichert, anschließend werden personalisierte Werbe-E-Mails versendet sowie automatisch befüllte Word-Dokumente zur postalischen Aussendung generiert und gedruckt.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr
+            class="z-10 mx-5 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"
+    />
+
+    <!-- KI-Galerie / Stable Diffusion -->
+    <section class="max-w-7xl mx-auto px-6 py-12 ">
+        <h1 class="text-5xl font-semibold text-center mb-8">KI-Experimente & Bildgenerierung</h1>
+        <p class="text-center mb-6">Mit Stable Diffusion und gezieltem Prompting habe ich eigene digitale Kunstwerke erschaffen – mit Fokus auf Posen, Komposition und Lichtszenarien.</p>
+
+        <div class="grid grid-cols-3 gap-6 max-[1300px]:grid-cols-1">
+            <img src="/images/ki_bild_1.png" alt="Ikarus Pose | Fallen Angel" class="rounded-lg shadow w-full h-auto" />
+            <img src="/images/ki_bild_2.png" alt="Fallen Angel and Teen" class="rounded-lg shadow w-full h-auto" />
+            <img src="/images/ki_bild_3.png" alt="Purple Moon Raining" class="rounded-lg shadow w-full h-auto" />
+        </div>
+    </section>
+
+
+    <hr
+            class="z-10 mx-5 mb-20 mt-20 h-0.5 border-none bg-slate-400 opacity-[0.3]"
+    />
+
+    <!-- Technik-Blog Vorschau -->
+    <section class="max-w-4xl mx-auto px-6 py-12 text-gray-100">
+        <h1 class="text-5xl font-semibold text-center mb-8">Technik & Gedanken</h1>
+        <ul class="space-y-4">
+            <li class="dark:bg-gray-800 bg-gray-500 p-4 rounded-xl shadow">
+                <h3 class="text-xl font-bold">Wie funktioniert eine Bowlingbahn eigentlich?</h3>
+                <p>Ein Blick hinter die Kulissen der Pin-Mechanik, Sensoren und Wartungssysteme.</p>
+            </li>
+            <li class="dark:bg-gray-800 bg-gray-500 p-4 rounded-xl shadow">
+                <h3 class="text-xl font-bold">Warum Kettenübersetzung für Supersport-Motorräder entscheidend ist</h3>
+                <p>Ein technischer Deep-Dive zu Zahnradverhältnissen, Drehmoment und Beschleunigung.</p>
+            </li>
+            <li class="dark:bg-gray-800 bg-gray-500 p-4 rounded-xl shadow">
+                <h3 class="text-xl font-bold">Tastatur spinnt? So gehst du logisch vor</h3>
+                <p>Wenn aus einem "h" plötzlich ein "zh67" wird – eine Fehleranalyse.</p>
+            </li>
+        </ul>
+    </section>
+
+</Main>
