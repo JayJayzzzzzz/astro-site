@@ -44,7 +44,7 @@ export default function HeroSection() {
                     <span className="">Julian </span>
                     <span className="">Schaefers</span>
                 </h1>
-                <h2>19 Jahre alt</h2>
+                <h2>20 Jahre alt</h2>
                 <p className="mt-10">
                     <Typewriter
                         words={[
